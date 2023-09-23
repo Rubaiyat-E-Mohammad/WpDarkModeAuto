@@ -22,3 +22,6 @@ This repository contains automated tests for enabling and configuring wp-dark-mo
    ```plaintext
    USERNAME=your_username
    PASSWORD=your_password
+## Running the test suite
+
+-mvn test
