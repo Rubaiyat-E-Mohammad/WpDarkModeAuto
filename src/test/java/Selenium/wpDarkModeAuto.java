@@ -31,8 +31,8 @@ public class wpDarkModeAuto {
 	
 	@Test(priority=2)
 	public void loggingIn() {
-		driver.findElement(By.id("user_login")).sendKeys("trubaiyatemohammad@gmail.com");
-		driver.findElement(By.id("user_pass")).sendKeys("T46888468");
+		driver.findElement(By.id("user_login")).sendKeys("");
+		driver.findElement(By.id("user_pass")).sendKeys("");
 		driver.findElement(By.id("rememberme")).click();
 		driver.findElement(By.id("wp-submit")).click();
 	}
@@ -65,5 +65,83 @@ public class wpDarkModeAuto {
 			driver.findElement(By.id("save_settings")).click();
 		}
 	}
-
+	
+	@Test(priority=5)
+	public void checkDarkMode() {
+		String check = driver.findElement(By.className("wp-dark-mode-switcher")).getAttribute("class");
+		if(check.contains("active")) {
+			System.out.println("true");
+		}else {
+			System.out.println("false");
+		}
+	}
+	
+	@Test(priority=6)
+	public void floatingSwitchStyle() {
+		driver.findElement(By.className("toplevel_page_wp-dark-mode-settings")).click();
+		driver.findElement(By.id("wp_dark_mode_switch-tab")).click();
+		driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[4]/form/table/tbody/tr[2]/td/fieldset/label[3]/img")).click();
+		driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[4]/form/div/p/input")).click();
+	}
+	
+	@Test(priority=7)
+	public void floatingSwitchSize() {
+		driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[4]/form/table/tbody/tr[3]/td/div/span[6]")).click();
+		WebElement slider = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[4]/form/table/tbody/tr[4]/td/div/div[1]"));
+		Actions action = new Actions(driver);
+	    action.clickAndHold(slider).moveByOffset(125, 0).perform();
+	    driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[4]/form/div/p/input")).click();
+	}
+	
+	@Test(priority=8)
+	public void switchPosition() throws InterruptedException {
+		WebElement position = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[4]/form/table/tbody/tr[5]/td/select"));
+		Select newPosition = new Select(position);
+		newPosition.selectByValue("right_bottom");
+		driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[4]/form/div/p/input")).click();
+	}
+	
+	@Test(priority=9)
+	public void disableKeyboardShortcut() {
+		driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/ul/li[8]/a/span")).click();
+		WebElement checkbox = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[8]/form/table/tbody/tr[5]/td/fieldset/label/div/div/label"));
+		String isChecked = driver.findElement(By.id("wppool-wp_dark_mode_accessibility[keyboard_shortcut]")).getAttribute("checked");
+		if(isChecked != null) {
+			driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[8]/form/div/p/input")).click();
+		}else {
+			System.out.println("false");
+			checkbox.click();
+			driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[8]/form/div/p/input")).click();
+		}
+		
+	}
+	
+	@Test(priority=10)
+	public void toggleDarkmodeAnimation() {
+		driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/ul/li[13]/a/span")).click();
+		WebElement checkbox = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[13]/form/table/tbody/tr[1]/td/fieldset/label/div/div/label"));
+		String isChecked = driver.findElement(By.id("wppool-wp_dark_mode_animation[toggle_animation]")).getAttribute("checked");
+		if(isChecked != null) {
+			driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[13]/form/div/p/input")).click();
+		}else {
+			System.out.println("false");
+			checkbox.click();
+			driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[13]/form/div/p/input")).click();
+		}
+		WebElement position = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[13]/form/table/tbody/tr[2]/td/select"));
+		Select newPosition = new Select(position);
+		newPosition.selectByValue("pulse");
+		driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[13]/form/div/p/input")).click();
+	}
+	
+	@Test(priority=11)
+	public void checkFrontend() {
+		driver.get("http://localhost/Remt/");
+		driver.findElement(By.xpath("/html/body/div[3]/label/img[2]")).click();
+	}
+	
+	@AfterTest
+	public void endSession() {
+		driver.quit();
+	}
 }

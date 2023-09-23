@@ -5,8 +5,9 @@
     <classes>
       <class name="Selenium.wpDarkModeAuto">
         <methods>
+          <include name="checkFrontend"/>
+          <include name="endSession"/>
           <include name="setBaseURL"/>
-          <include name="enableDarkMode"/>
         </methods>
       </class> <!-- Selenium.wpDarkModeAuto -->
     </classes>

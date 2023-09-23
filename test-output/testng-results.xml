@@ -1,32 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-23T09:30:23 BDT" name="Default suite" finished-at="2023-09-23T09:30:28 BDT" duration-ms="4754">
+  <suite started-at="2023-09-23T15:22:22 BDT" name="Default suite" finished-at="2023-09-23T15:22:32 BDT" duration-ms="9789">
     <groups>
     </groups>
-    <test started-at="2023-09-23T09:30:23 BDT" name="Default test" finished-at="2023-09-23T09:30:28 BDT" duration-ms="4754">
+    <test started-at="2023-09-23T15:22:22 BDT" name="Default test" finished-at="2023-09-23T15:22:32 BDT" duration-ms="9789">
       <class name="Selenium.wpDarkModeAuto">
-        <test-method is-config="true" signature="setBaseURL()[pri:0, instance:Selenium.wpDarkModeAuto@6dc17b83]" started-at="2023-09-23T09:30:23 BDT" name="setBaseURL" finished-at="2023-09-23T09:30:26 BDT" duration-ms="2028" status="PASS">
+        <test-method is-config="true" signature="setBaseURL()[pri:0, instance:Selenium.wpDarkModeAuto@661972b0]" started-at="2023-09-23T15:22:22 BDT" name="setBaseURL" finished-at="2023-09-23T15:22:24 BDT" duration-ms="2038" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBaseURL -->
-        <test-method signature="urlCheck()[pri:1, instance:Selenium.wpDarkModeAuto@6dc17b83]" started-at="2023-09-23T09:30:26 BDT" name="urlCheck" finished-at="2023-09-23T09:30:26 BDT" duration-ms="8" status="PASS">
+        <test-method signature="urlCheck()[pri:1, instance:Selenium.wpDarkModeAuto@661972b0]" started-at="2023-09-23T15:22:24 BDT" name="urlCheck" finished-at="2023-09-23T15:22:24 BDT" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- urlCheck -->
-        <test-method signature="loggingIn()[pri:2, instance:Selenium.wpDarkModeAuto@6dc17b83]" started-at="2023-09-23T09:30:26 BDT" name="loggingIn" finished-at="2023-09-23T09:30:27 BDT" duration-ms="1014" status="PASS">
+        <test-method signature="loggingIn()[pri:2, instance:Selenium.wpDarkModeAuto@661972b0]" started-at="2023-09-23T15:22:24 BDT" name="loggingIn" finished-at="2023-09-23T15:22:25 BDT" duration-ms="917" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loggingIn -->
-        <test-method signature="activateWpDarkMode()[pri:3, instance:Selenium.wpDarkModeAuto@6dc17b83]" started-at="2023-09-23T09:30:27 BDT" name="activateWpDarkMode" finished-at="2023-09-23T09:30:27 BDT" duration-ms="490" status="PASS">
+        <test-method signature="activateWpDarkMode()[pri:3, instance:Selenium.wpDarkModeAuto@661972b0]" started-at="2023-09-23T15:22:25 BDT" name="activateWpDarkMode" finished-at="2023-09-23T15:22:25 BDT" duration-ms="455" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- activateWpDarkMode -->
-        <test-method signature="enableBackendDarkMode()[pri:4, instance:Selenium.wpDarkModeAuto@6dc17b83]" started-at="2023-09-23T09:30:27 BDT" name="enableBackendDarkMode" finished-at="2023-09-23T09:30:28 BDT" duration-ms="1195" status="PASS">
+        <test-method signature="enableBackendDarkMode()[pri:4, instance:Selenium.wpDarkModeAuto@661972b0]" started-at="2023-09-23T15:22:25 BDT" name="enableBackendDarkMode" finished-at="2023-09-23T15:22:27 BDT" duration-ms="1342" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enableBackendDarkMode -->
+        <test-method signature="checkDarkMode()[pri:5, instance:Selenium.wpDarkModeAuto@661972b0]" started-at="2023-09-23T15:22:27 BDT" name="checkDarkMode" finished-at="2023-09-23T15:22:27 BDT" duration-ms="19" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkDarkMode -->
+        <test-method signature="floatingSwitchStyle()[pri:6, instance:Selenium.wpDarkModeAuto@661972b0]" started-at="2023-09-23T15:22:27 BDT" name="floatingSwitchStyle" finished-at="2023-09-23T15:22:27 BDT" duration-ms="705" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- floatingSwitchStyle -->
+        <test-method signature="floatingSwitchSize()[pri:7, instance:Selenium.wpDarkModeAuto@661972b0]" started-at="2023-09-23T15:22:27 BDT" name="floatingSwitchSize" finished-at="2023-09-23T15:22:28 BDT" duration-ms="989" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- floatingSwitchSize -->
+        <test-method signature="switchPosition()[pri:8, instance:Selenium.wpDarkModeAuto@661972b0]" started-at="2023-09-23T15:22:28 BDT" name="switchPosition" finished-at="2023-09-23T15:22:29 BDT" duration-ms="634" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- switchPosition -->
+        <test-method signature="disableKeyboardShortcut()[pri:9, instance:Selenium.wpDarkModeAuto@661972b0]" started-at="2023-09-23T15:22:29 BDT" name="disableKeyboardShortcut" finished-at="2023-09-23T15:22:30 BDT" duration-ms="680" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disableKeyboardShortcut -->
+        <test-method signature="toggleDarkmodeAnimation()[pri:10, instance:Selenium.wpDarkModeAuto@661972b0]" started-at="2023-09-23T15:22:30 BDT" name="toggleDarkmodeAnimation" finished-at="2023-09-23T15:22:31 BDT" duration-ms="1230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- toggleDarkmodeAnimation -->
+        <test-method signature="checkFrontend()[pri:11, instance:Selenium.wpDarkModeAuto@661972b0]" started-at="2023-09-23T15:22:31 BDT" name="checkFrontend" finished-at="2023-09-23T15:22:31 BDT" duration-ms="586" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkFrontend -->
+        <test-method is-config="true" signature="endSession()[pri:0, instance:Selenium.wpDarkModeAuto@661972b0]" started-at="2023-09-23T15:22:31 BDT" name="endSession" finished-at="2023-09-23T15:22:32 BDT" duration-ms="157" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
       </class> <!-- Selenium.wpDarkModeAuto -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
