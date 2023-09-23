@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-09-23T09:30:23 BDT" name="Default suite" finished-at="2023-09-23T09:30:28 BDT" duration-ms="4754">
+    <groups>
+    </groups>
+    <test started-at="2023-09-23T09:30:23 BDT" name="Default test" finished-at="2023-09-23T09:30:28 BDT" duration-ms="4754">
+      <class name="Selenium.wpDarkModeAuto">
+        <test-method is-config="true" signature="setBaseURL()[pri:0, instance:Selenium.wpDarkModeAuto@6dc17b83]" started-at="2023-09-23T09:30:23 BDT" name="setBaseURL" finished-at="2023-09-23T09:30:26 BDT" duration-ms="2028" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setBaseURL -->
+        <test-method signature="urlCheck()[pri:1, instance:Selenium.wpDarkModeAuto@6dc17b83]" started-at="2023-09-23T09:30:26 BDT" name="urlCheck" finished-at="2023-09-23T09:30:26 BDT" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- urlCheck -->
+        <test-method signature="loggingIn()[pri:2, instance:Selenium.wpDarkModeAuto@6dc17b83]" started-at="2023-09-23T09:30:26 BDT" name="loggingIn" finished-at="2023-09-23T09:30:27 BDT" duration-ms="1014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loggingIn -->
+        <test-method signature="activateWpDarkMode()[pri:3, instance:Selenium.wpDarkModeAuto@6dc17b83]" started-at="2023-09-23T09:30:27 BDT" name="activateWpDarkMode" finished-at="2023-09-23T09:30:27 BDT" duration-ms="490" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- activateWpDarkMode -->
+        <test-method signature="enableBackendDarkMode()[pri:4, instance:Selenium.wpDarkModeAuto@6dc17b83]" started-at="2023-09-23T09:30:27 BDT" name="enableBackendDarkMode" finished-at="2023-09-23T09:30:28 BDT" duration-ms="1195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enableBackendDarkMode -->
+      </class> <!-- Selenium.wpDarkModeAuto -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
